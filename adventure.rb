@@ -1,12 +1,16 @@
 class Intro
 
-	attr_reader :life
+	attr_accessor :life, :life_rnd, :dexterity
 
 	def initialize 
-		puts "Choose your own adventure!"
-		puts "Begin with determining your hero's attributes."
+		intro_prompt
 		@life_rnd  = 0 
 		@dexterity = 0 
+	end
+
+	def intro_prompt
+		puts "Choose your own adventure!"
+		puts "Begin with determining your hero's attributes."
 	end
 
 	def get_life
