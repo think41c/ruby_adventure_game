@@ -1,6 +1,11 @@
 puts "Choose your own adventure!"
 puts "Begin with determining your hero's attributes"
-life = gets.chomp.to_i
+get_life
+def get_life
+	life = gets.chomp.to_i	
+end
+
+
 puts "You have #{rand(life)} points of life."
 
 
