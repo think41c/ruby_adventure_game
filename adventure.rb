@@ -9,13 +9,13 @@ class Intro
 	end
 
 	def validate_life
-		if @life.class != Fixnum
+		if @life.include?("A")
 			puts "it's not a number!"
-		end
-		
-		if @life > 100
-			puts "Try again"
 			get_life
+		end
+
+		if @life.to_i > 100
+			puts "Try again"
 		end
 	end
 
