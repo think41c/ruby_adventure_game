@@ -14,9 +14,10 @@ class Intro
 		end
 	end
 
-	# validate_life
-	puts "You have #{rand(@life)} points of life."
+
 end
 
 a = Intro.new 
 a.get_life
+a.validate_life
+puts "You have #{rand(@life)} points of life."
