@@ -1,19 +1,23 @@
-puts "Choose your own adventure!"
-puts "Begin with determining your hero's attributes"
-get_life
-def get_life
-	@life = gets.chomp.to_i	
-end
-validate_life
+class Intro
+	puts "Choose your own adventure!"
+	puts "Begin with determining your hero's attributes"
 
-def validate_life
-	if @life > 100
-		puts "Try again"
-		get_life
+
+	def get_life
+		@life = gets.chomp.to_i	
 	end
+
+	def validate_life
+		if @life > 100
+			puts "Try again"
+			get_life
+		end
+	end
+
+	# get_life
+	# validate_life
+	puts "You have #{rand(@life)} points of life."
 end
 
-
-puts "You have #{rand(@life)} points of life."
-
-
+a = Intro.new 
+a
