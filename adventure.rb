@@ -4,10 +4,15 @@ class Intro
 
 
 	def get_life
-		@life = gets.chomp.to_i	
+		@life = gets.chomp
+		validate_life
 	end
 
 	def validate_life
+		if @life.class != Fixnum
+			puts "it's not a number!"
+		end
+		
 		if @life > 100
 			puts "Try again"
 			get_life
