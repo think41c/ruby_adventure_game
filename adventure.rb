@@ -8,8 +8,8 @@ class Intro
 	end
 
 	def validate_life
-		if @life.match(/[A-Z]/)
-			puts "it's not a number!"
+		if @life.match(/[A-Z]/i)
+			puts "Please type in a number only."
 			get_life
 		end
 
