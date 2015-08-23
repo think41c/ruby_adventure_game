@@ -13,14 +13,14 @@ class Intro
 			get_life
 		end
 
-		if @life.to_i >= 100 || @life.to_i <= 0
+		if @life.to_i > 100 || @life.to_i < 0
 			puts "Try again with a number between 0 and 100."
 			get_life
 		end
 	end
 
 	def make_rnd
-		@life_rnd = rand(1..@life.to_i)
+		@life_rnd = rand(0..@life.to_i)
 		puts @life_rnd
 	end
 
