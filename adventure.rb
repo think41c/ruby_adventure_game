@@ -2,14 +2,13 @@ class Intro
 	puts "Choose your own adventure!"
 	puts "Begin with determining your hero's attributes"
 
-
 	def get_life
 		@life = gets.chomp
 		validate_life
 	end
 
 	def validate_life
-		if @life.include?("A")
+		if @life.match(/[A-Z]/)
 			puts "it's not a number!"
 			get_life
 		end
