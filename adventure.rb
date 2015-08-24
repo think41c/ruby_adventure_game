@@ -19,6 +19,11 @@ class Intro
 		end
 	end
 
+	def get_attrib
+		@attrib = gets.chomp
+		validate_life
+	end
+
 	def make_rnd
 		@life_rnd = rand(0..@life.to_i)
 		puts @life_rnd
@@ -35,4 +40,5 @@ a.get_life
 a.validate_life
 puts "You have #{rand(1..@life.to_i)} points of life."
 a.make_rnd
-prompt_for_attirbute
+prompt_for_attribute
+get_attrib
