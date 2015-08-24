@@ -33,3 +33,4 @@ a.get_life
 a.validate_life
 puts "You have #{rand(1..@life.to_i)} points of life."
 a.make_rnd
+puts "Congrats, you now need to pick another attribute." 
