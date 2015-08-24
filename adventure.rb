@@ -29,10 +29,9 @@ class Intro
 		puts @life_rnd
 	end
 
-	def prompt_for_attirbute
+	def prompt_for_attribute
 		puts "Congrats, you now need to pick another attribute." 	
 	end
-
 end
 
 a = Intro.new 
@@ -40,5 +39,5 @@ a.get_life
 a.validate_life
 puts "You have #{rand(1..@life.to_i)} points of life."
 a.make_rnd
-prompt_for_attribute
-get_attrib
+a.prompt_for_attribute
+a.get_attrib
