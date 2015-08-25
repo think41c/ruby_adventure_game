@@ -1,6 +1,10 @@
 class Intro
-	puts "Choose your own adventure!"
-	puts "Begin with determining your hero's attributes."
+	def initialize 
+		puts "Choose your own adventure!"
+		puts "Begin with determining your hero's attributes."
+		@life = 0 
+		@dexterity = 0 
+	end
 
 	def get_life
 		@life = gets.chomp
