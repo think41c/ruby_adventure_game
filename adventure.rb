@@ -12,6 +12,7 @@ class Intro
 	def get_life
 		@life = gets.chomp
 		attribute_validator
+		@life = make_rnd(@life)
 	end
 
 	def validate_dexterity
@@ -53,7 +54,8 @@ end
 a = Intro.new 
 a.get_life
 a.attribute_validator
-puts "You have #{rand(1..@life.to_i)} points of life."
+puts "You have #{a.life} points of life."
+# puts "You have #{rand(1..@life.to_i)} points of life."
 puts a.life
 a.prompt_for_attribute
 a.get_attrib
