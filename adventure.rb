@@ -2,13 +2,20 @@ class Intro
 	def initialize 
 		puts "Choose your own adventure!"
 		puts "Begin with determining your hero's attributes."
-		@life = 0 
+		@life_rnd  = 0 
 		@dexterity = 0 
 	end
 
 	def get_life
 		@life = gets.chomp
 		validate_life
+	end
+
+	def validate_dexterity
+		if @dexterity.match(/[A-Z]/i)
+			puts "Please type in a number only."
+			get_attrib
+		end
 	end
 
 	def validate_life
