@@ -8,7 +8,7 @@ class Intro
 
 	def get_life
 		@life = gets.chomp
-		validate_life
+		attribute_validator
 	end
 
 	def validate_dexterity
@@ -18,7 +18,7 @@ class Intro
 		end
 	end
 
-	def validate_life
+	def attribute_validator
 		if @life.match(/[A-Z]/i)
 			puts "Please type in a number only."
 			get_life
@@ -32,7 +32,7 @@ class Intro
 
 	def get_attrib
 		@attrib = gets.chomp
-		validate_life
+		attribute_validator
 	end
 
 	def make_rnd
@@ -47,7 +47,7 @@ end
 
 a = Intro.new 
 a.get_life
-a.validate_life
+a.attribute_validator
 puts "You have #{rand(1..@life.to_i)} points of life."
 a.make_rnd
 a.prompt_for_attribute
