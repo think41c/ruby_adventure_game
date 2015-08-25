@@ -1,4 +1,7 @@
 class Intro
+
+	attr_reader :life
+
 	def initialize 
 		puts "Choose your own adventure!"
 		puts "Begin with determining your hero's attributes."
@@ -35,9 +38,11 @@ class Intro
 		attribute_validator
 	end
 
-	def make_rnd
-		@life_rnd = rand(0..@life.to_i)
-		puts @life_rnd
+	def make_rnd(attribute)
+		# @life_rnd = rand(0..@life.to_i)
+		# puts @life_rnd
+		attribute = rand(0..attribute.to_i)
+		puts "You rolled a #{attribute}"
 	end
 
 	def prompt_for_attribute
@@ -49,6 +54,6 @@ a = Intro.new
 a.get_life
 a.attribute_validator
 puts "You have #{rand(1..@life.to_i)} points of life."
-a.make_rnd
+puts a.life
 a.prompt_for_attribute
 a.get_attrib
