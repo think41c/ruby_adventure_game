@@ -9,7 +9,7 @@ class Intro
 		get_life
 		attribute_validator
 		prompt_for_attribute
-		puts "You have #{a.life_rnd} points of life."
+		puts "You have #{@life_rnd} points of life."
 		get_attrib
 
 	end
@@ -20,7 +20,8 @@ class Intro
 	end
 
 	def get_life
-		@life_rnd = gets.chomp
+		# @life_rnd = gets.chomp
+		@life_rnd = 7   # Stubbing in 7 as the input
 		attribute_validator
 		@life_rnd = make_rnd(@life_rnd)
 	end
@@ -61,4 +62,5 @@ class Intro
 end
 
 a = Intro.new 
+a
 
