@@ -44,8 +44,6 @@ class Intro
 	end
 
 	def make_rnd(attribute)
-		# @life_rnd = rand(0..@life.to_i)
-		# puts @life_rnd
 		attribute = rand(0..attribute.to_i)
 		puts "You rolled a #{attribute}"
 	end
