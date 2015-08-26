@@ -57,7 +57,5 @@ a = Intro.new
 a.get_life
 a.attribute_validator
 puts "You have #{a.life} points of life."
-# puts "You have #{rand(1..@life.to_i)} points of life."
-puts a.life
 a.prompt_for_attribute
 a.get_attrib
