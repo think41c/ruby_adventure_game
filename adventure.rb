@@ -6,6 +6,12 @@ class Intro
 		intro_prompt
 		@life_rnd  = 0 
 		@dexterity = 0 
+		get_life
+		attribute_validator
+		prompt_for_attribute
+		puts "You have #{a.life_rnd} points of life."
+		get_attrib
+
 	end
 
 	def intro_prompt
@@ -14,9 +20,9 @@ class Intro
 	end
 
 	def get_life
-		@life = gets.chomp
+		@life_rnd = gets.chomp
 		attribute_validator
-		@life = make_rnd(@life)
+		@life_rnd = make_rnd(@life_rnd)
 	end
 
 	def validate_dexterity
@@ -27,12 +33,13 @@ class Intro
 	end
 
 	def attribute_validator
-		if @life.match(/[A-Z]/i)
+		puts "#{@life_rnd} --- "
+		if @life_rnd.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
 			get_life
 		end
 
-		if @life.to_i > 100 || @life.to_i < 0
+		if @life_rnd.to_i > 100 || @life_rnd.to_i < 0
 			puts "Try again with a number between 0 and 100."
 			get_life
 		end
@@ -54,8 +61,4 @@ class Intro
 end
 
 a = Intro.new 
-a.get_life
-a.attribute_validator
-puts "You have #{a.life} points of life."
-a.prompt_for_attribute
-a.get_attrib
+
