@@ -4,7 +4,7 @@ class Intro
 
 	def initialize 
 		intro_prompt
-		@life_rnd  = 0 
+		@life_rnd=5 
 		@dexterity = 0 
 		get_life
 		attribute_validator
@@ -17,6 +17,7 @@ class Intro
 	def intro_prompt
 		puts "Choose your own adventure!"
 		puts "Begin with determining your hero's attributes."
+
 	end
 
 	def get_life
@@ -24,6 +25,8 @@ class Intro
 		@life_rnd = 7   # Stubbing in 7 as the input
 		attribute_validator
 		@life_rnd = make_rnd(@life_rnd)
+		### @life_rnd is turning to nil from this prior experssion
+		puts "Hey its #{@life_rnd}"
 	end
 
 	def validate_dexterity
