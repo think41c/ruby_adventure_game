@@ -8,7 +8,6 @@ class Intro
 		get_life
 		prompt_for_attribute
 		get_attrib
-
 	end
 
 	def intro_prompt
@@ -32,13 +31,12 @@ class Intro
 	end
 
 	def attribute_validator(user_input)
-		# if @life_rnd.to_s.match(/[A-Z]/i)
 		if user_input.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
 			get_life
 		end
 
-		if @life_rnd.to_i > 100 || @life_rnd.to_i < 0
+		if user_input.to_i > 100 || user_input.to_i < 0
 			puts "Try again with a number between 0 and 100."
 			get_life
 		end
