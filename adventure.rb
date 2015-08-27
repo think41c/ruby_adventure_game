@@ -4,12 +4,9 @@ class Intro
 
 	def initialize 
 		intro_prompt
-		@life_rnd=5 
 		@dexterity = 0 
 		get_life
-		attribute_validator
 		prompt_for_attribute
-		puts "You have #{@life_rnd} points of life."
 		get_attrib
 
 	end
@@ -17,14 +14,14 @@ class Intro
 	def intro_prompt
 		puts "Choose your own adventure!"
 		puts "Begin with determining your hero's attributes."
-
 	end
 
 	def get_life
 		# @life_rnd = gets.chomp
 		@life_rnd = 7   # Stubbing in 7 as the input
-		attribute_validator
+		attribute_validator(@life_rnd)
 		@life_rnd = make_rnd(@life_rnd)
+		puts "You have #{@life_rnd} points of life."
 	end
 
 	def validate_dexterity
@@ -34,8 +31,9 @@ class Intro
 		end
 	end
 
-	def attribute_validator
-		if @life_rnd.to_s.match(/[A-Z]/i)
+	def attribute_validator(user_input)
+		# if @life_rnd.to_s.match(/[A-Z]/i)
+		if user_input.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
 			get_life
 		end
@@ -47,8 +45,9 @@ class Intro
 	end
 
 	def get_attrib
-		@attrib = gets.chomp
-		attribute_validator
+		dexterity = gets.chomp
+		puts "in the attrib"
+		attribute_validator(dexterity)
 	end
 
 	def make_rnd(attribute)
