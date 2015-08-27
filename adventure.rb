@@ -57,6 +57,7 @@ class Intro
 	def make_rnd(attribute)
 		attribute = rand(0..attribute.to_i)
 		puts "You rolled a #{attribute}"
+		attribute
 	end
 
 	def prompt_for_attribute
