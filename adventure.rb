@@ -25,8 +25,6 @@ class Intro
 		@life_rnd = 7   # Stubbing in 7 as the input
 		attribute_validator
 		@life_rnd = make_rnd(@life_rnd)
-		### @life_rnd is turning to nil from this prior experssion
-		puts "Hey its #{@life_rnd}"
 	end
 
 	def validate_dexterity
@@ -37,7 +35,6 @@ class Intro
 	end
 
 	def attribute_validator
-		puts "#{@life_rnd} --- "
 		if @life_rnd.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
 			get_life
