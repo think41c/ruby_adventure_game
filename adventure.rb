@@ -62,11 +62,13 @@ class Intro
   def begin
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
+    direction_validator(direction)
     puts "You decide to travel #{direction}?"
+
   end
 
   def direction_validator(direction)
-    if direction.to_s.match(/[NSEW]/i)
+    if direction.to_s.match(/[NSEW]/i) && direction.length == 1
       puts "It's valid"
     else
       puts "Not a valid direction!"
