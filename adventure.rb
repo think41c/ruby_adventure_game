@@ -59,19 +59,26 @@ class Intro
 		puts "Congrats, you now need to pick another attribute." 	
 	end
 
-  def begin
+  def the_beginning
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
-    direction_validator(direction)
-    puts "You decide to travel #{direction}?"
+    if direction_validator(direction) == true
+      puts "You decide to travel #{direction}?"
+    else
+      "Choose again"
+      the_beginning
+    end
+
 
   end
 
   def direction_validator(direction)
     if direction.to_s.match(/[NSEW]/i) && direction.length == 1
       puts "It's valid"
+      true
     else
       puts "Not a valid direction!"
+      false
     end
   end
 
@@ -81,4 +88,4 @@ end
 
 a = Intro.new 
 a
-a.begin
+a.the_beginning
