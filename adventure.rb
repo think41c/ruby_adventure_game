@@ -17,7 +17,7 @@ class Intro
 
 	def get_life
 		# @life_rnd = gets.chomp
-		@life_rnd = 7   # Stubbing in 7 as the input
+		@life_rnd = 70  # Stubbing in 7 as the input
 		attribute_validator(@life_rnd)
 		@life_rnd = make_rnd(@life_rnd)
 		puts "You have #{@life_rnd} points of life."
@@ -44,7 +44,6 @@ class Intro
 
 	def get_attrib
 		dexterity = gets.chomp
-		puts "in the attrib"
 		attribute_validator(dexterity)
     dexterity = make_rnd(dexterity)
     puts "Your dexterity is #{dexterity}"
@@ -60,9 +59,15 @@ class Intro
 		puts "Congrats, you now need to pick another attribute." 	
 	end
 
+  def begin
+    puts "You're outside a castle. You see a path to the north. N/S/E/W"    
+    direction = gets.chomp
+    puts "You decide to travel #{direction}?"
+  end
 
 end
 
+
 a = Intro.new 
 a
-
+a.begin
