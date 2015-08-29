@@ -68,13 +68,11 @@ class Intro
       "Choose again"
       the_beginning
     end
-
-
   end
 
   def direction_validator(direction)
     if direction.to_s.match(/[NSEW]/i) && direction.length == 1
-      puts "It's valid"
+      puts "You've picked a noble direction!"
       true
     else
       puts "Not a valid direction!"
