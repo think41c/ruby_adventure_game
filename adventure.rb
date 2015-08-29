@@ -68,6 +68,11 @@ class Intro
       "Choose again"
       the_beginning
     end
+
+    if direction.upcase == "N"
+      puts "You kick your horse sternly to move northward!"
+    end
+    
   end
 
   def direction_validator(direction)
