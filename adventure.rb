@@ -65,6 +65,15 @@ class Intro
     puts "You decide to travel #{direction}?"
   end
 
+  def direction_validator(direction)
+    if direction.to_s.match(/[NSEW]/i)
+      puts "It's valid"
+    else
+      puts "Not a valid direction!"
+    end
+  end
+
+
 end
 
 
