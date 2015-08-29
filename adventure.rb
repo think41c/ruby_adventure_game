@@ -29,7 +29,7 @@ class Intro
 			get_attrib
 		end
 	end
-
+    
 	def attribute_validator(user_input)
 		if user_input.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
@@ -46,6 +46,8 @@ class Intro
 		dexterity = gets.chomp
 		puts "in the attrib"
 		attribute_validator(dexterity)
+    dexterity = make_rnd(dexterity)
+    puts "Your dexterity is #{dexterity}"
 	end
 
 	def make_rnd(attribute)
@@ -57,6 +59,8 @@ class Intro
 	def prompt_for_attribute
 		puts "Congrats, you now need to pick another attribute." 	
 	end
+
+
 end
 
 a = Intro.new 
