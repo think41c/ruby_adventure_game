@@ -59,11 +59,18 @@ class Intro
 		puts "Congrats, you now need to pick another attribute." 	
 	end
 
+  def cardinal_convert(direction)
+    case 
+    end
+    return "north"
+
+  end
+
   def the_beginning
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
     if direction_validator(direction) == true
-      puts "You decide to travel #{direction}?"
+      puts "You decide to travel #{cardinal_convert(direction)}?"
     else
       "Choose again"
       the_beginning
