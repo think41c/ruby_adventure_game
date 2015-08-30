@@ -92,6 +92,8 @@ class Intro
     else 
       puts "You hit an impasse and return to the castle."
       the_beginning
+      # Instead of going back to the_beginning, can I go
+      # back to the method that just called it? 
     end
   end
 
