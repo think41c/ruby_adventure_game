@@ -90,7 +90,7 @@ class Intro
       location = "local_01"
       local_01
     else 
-      "You hit an impasse and return to the castle."
+      puts "You hit an impasse and return to the castle."
       the_beginning
     end
   end
