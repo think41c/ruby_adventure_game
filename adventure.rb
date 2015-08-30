@@ -60,9 +60,8 @@ class Intro
 	end
 
   def cardinal_convert(direction)
-    case direction
-    when "N" 
-    "North"
+    case direction.upcase
+    when "N" then return "north"
     # when "B"
     # puts 'Try harder!'
     # when "C"
@@ -76,6 +75,8 @@ class Intro
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
     if direction_validator(direction) == true
+      a = cardinal_convert(direction)
+      puts a 
       puts "You decide to travel #{cardinal_convert(direction)}?"
     else
       "Choose again"
