@@ -87,7 +87,8 @@ class Intro
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move Northward!"
-      location = "01"
+      location = "local_01"
+      local_01
     else 
       "You hit an impasse and return to the castle."
       the_beginning
@@ -103,6 +104,11 @@ class Intro
       false
     end
   end
+
+  def local_01
+    puts "You're in local_01 location"
+  end
+
 end
 
 a = Intro.new 
