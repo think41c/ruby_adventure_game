@@ -61,13 +61,16 @@ class Intro
 
   def cardinal_convert(direction)
     case direction.upcase
-    when "N" then return "north"
-    # when "B"
-    # puts 'Try harder!'
-    # when "C"
-    # puts 'You need help!!!'
+    when "N" 
+      "North"
+    when "S"
+      "South"
+    when "E"
+      "East"
+    when "W"
+      "West"
     else
-    # puts "Somehow you put in a bad direction."
+      puts "Somehow you put in a bad direction."
     end
   end
 
