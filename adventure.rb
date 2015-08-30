@@ -60,10 +60,16 @@ class Intro
 	end
 
   def cardinal_convert(direction)
-    case 
+    case direction
+    when "N" 
+    "North"
+    # when "B"
+    # puts 'Try harder!'
+    # when "C"
+    # puts 'You need help!!!'
+    else
+    # puts "Somehow you put in a bad direction."
     end
-    return "north"
-
   end
 
   def the_beginning
@@ -78,8 +84,7 @@ class Intro
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move northward!"
-    end
-    
+    end    
   end
 
   def direction_validator(direction)
@@ -91,7 +96,6 @@ class Intro
       false
     end
   end
-
 
 end
 
