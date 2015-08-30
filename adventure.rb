@@ -87,7 +87,11 @@ class Intro
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move Northward!"
-    end    
+      location = "01"
+    else 
+      "You hit an impasse and return to the castle."
+      the_beginning
+    end
   end
 
   def direction_validator(direction)
@@ -99,7 +103,6 @@ class Intro
       false
     end
   end
-
 end
 
 a = Intro.new 
