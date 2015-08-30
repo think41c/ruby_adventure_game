@@ -107,6 +107,11 @@ class Intro
 
   def local_01
     puts "You're in local_01 location"
+    # May need to make a massive Case statement that 
+    # asks what the local is and then switch to the 
+    # method of that locale to prompt the user. 
+    # The program will be a massive case, and a pile of
+    # methods displaying the locale. 
   end
 
 end
