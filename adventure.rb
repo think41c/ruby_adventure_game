@@ -79,15 +79,14 @@ class Intro
     direction = gets.chomp
     if direction_validator(direction) == true
       a = cardinal_convert(direction)
-      puts a 
-      puts "You decide to travel #{cardinal_convert(direction)}?"
+      puts "You decide to travel #{cardinal_convert(direction)}!"
     else
       "Choose again"
       the_beginning
     end
 
     if direction.upcase == "N"
-      puts "You kick your horse sternly to move northward!"
+      puts "You kick your horse sternly to move Northward!"
     end    
   end
 
@@ -102,7 +101,6 @@ class Intro
   end
 
 end
-
 
 a = Intro.new 
 a
