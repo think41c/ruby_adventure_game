@@ -56,7 +56,7 @@ class Intro
 	end
 
 	def prompt_for_attribute
-		puts "Congrats, you now need to pick another attribute." 	
+		puts "Congrats, you now need to pick another attribute. \n\n\n" 	
 	end
 
   def cardinal_convert(direction)
@@ -70,7 +70,7 @@ class Intro
     when "W"
       "You have chosen West"
     else
-      puts "Somehow you put in a bad direction."
+      "Somehow you put in a bad direction."
     end
   end
 
@@ -79,7 +79,7 @@ class Intro
     direction = gets.chomp
     if direction_validator(direction) == true
       a = cardinal_convert(direction)
-      puts "You decide to travel #{cardinal_convert(direction)}!"
+      puts "You decide to travel #{puts a}!"
     else
       "Choose again"
       the_beginning
