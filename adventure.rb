@@ -17,7 +17,7 @@ class Intro
 
 	def get_life
 		# @life_rnd = gets.chomp
-		@life_rnd = 70  # Stubbing in 7 as the input
+		@life_rnd = 70  # Stubbing in 70 as the input
 		attribute_validator(@life_rnd)
 		@life_rnd = make_rnd(@life_rnd)
 		puts "You have #{@life_rnd} points of life."
@@ -62,13 +62,13 @@ class Intro
   def cardinal_convert(direction)
     case direction.upcase
     when "N" 
-      "North"
+      "You have chosen North"
     when "S"
-      "South"
+      "You have chosen South"
     when "E"
-      "East"
+      "You have chosen East"
     when "W"
-      "West"
+      "You have chosen West"
     else
       puts "Somehow you put in a bad direction."
     end
@@ -120,6 +120,7 @@ class Intro
       local_01
     end
 
+    puts cardinal_convert(direction)
 
     # May need to make a massive Case statement that 
     # asks what the local is and then switch to the 
