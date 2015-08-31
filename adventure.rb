@@ -78,8 +78,7 @@ class Intro
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
     if direction_validator(direction) == true
-      a = cardinal_convert(direction)
-      puts "You decide to travel #{puts a}!"
+      puts cardinal_convert(direction)
     else
       "Choose again"
       the_beginning
