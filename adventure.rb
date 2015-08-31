@@ -108,7 +108,14 @@ class Intro
   end
 
   def local_01
-    puts "You're in local_01 location"
+    puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
+    direction = gets.chomp
+    if direction_validator(direction) == false 
+      puts "Invalid direction"
+      local_01
+    end
+    
+
     # May need to make a massive Case statement that 
     # asks what the local is and then switch to the 
     # method of that locale to prompt the user. 
