@@ -107,14 +107,19 @@ class Intro
     end
   end
 
+  def invalid_direction
+    puts "You've picked an invalid direction"
+  end
+
   def local_01
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
     direction = gets.chomp
+    
     if direction_validator(direction) == false 
-      puts "Invalid direction"
+      invalid_direction
       local_01
     end
-    
+
 
     # May need to make a massive Case statement that 
     # asks what the local is and then switch to the 
