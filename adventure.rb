@@ -74,14 +74,14 @@ class Intro
     end
   end
 
-  def the_beginning
+  def locale_01
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
     if direction_validator(direction) == true
       puts cardinal_convert(direction)
     else
       "Choose again"
-      the_beginning
+      locale_01
     end
 
     if direction.upcase == "N"
@@ -90,8 +90,8 @@ class Intro
       local_01
     else 
       puts "You hit an impasse and return to the castle."
-      the_beginning
-      # Instead of going back to the_beginning, can I go
+      locale_01
+      # Instead of going back to locale_01, can I go
       # back to the method that just called it? 
     end
   end
@@ -132,4 +132,4 @@ end
 
 a = Intro.new 
 a
-a.the_beginning
+a.locale_01
