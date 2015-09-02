@@ -8,6 +8,7 @@ class Intro
 		get_life
 		prompt_for_attribute
 		get_attrib
+    locale_00
 	end
 
 	def intro_prompt
@@ -122,7 +123,7 @@ class Intro
     puts cardinal_convert(direction)
     case direction 
     when "N" 
-      # locale_02
+      locale_02
     when "S"
       locale_00
     end
@@ -142,4 +143,3 @@ end
 
 a = Intro.new 
 a
-a.locale_01
