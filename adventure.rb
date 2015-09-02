@@ -134,6 +134,10 @@ class Intro
     # methods displaying the locale. 
   end
 
+  def locale_02
+    puts "You've busted into the castle!"
+  end
+
 end
 
 a = Intro.new 
