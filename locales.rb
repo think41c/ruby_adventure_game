@@ -1,0 +1,3 @@
+class locales
+
+end

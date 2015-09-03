@@ -1,3 +1,5 @@
+include locales.rb
+
 class Intro
 
 	attr_accessor :life, :life_rnd, :dexterity
@@ -121,7 +123,8 @@ class Intro
     end
 
     puts cardinal_convert(direction)
-    case direction 
+
+d    case direction 
     when "N" 
       locale_02
     when "S"
