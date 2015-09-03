@@ -1,26 +1,28 @@
 require_relative './locales'
 require_relative './validator'
+require_relative './messages'
 
 class Intro
 
 	attr_accessor :life, :life_rnd, :dexterity
 
 	def initialize 
+    system "clear"
     @locales   = Locales.new
     @validator = Validator.new
     @messages  = Messages.new
-		intro_prompt
+		@messages.intro_prompt
 		@dexterity = 0 
 		get_life
-		prompt_for_attribute
-		get_attrib
-    locale_00
+		# prompt_for_attribute
+		# get_attrib
+    # locale_00
 	end
 
 	def get_life
 		# @life_rnd = gets.chomp
 		@life_rnd = 70  # Stubbing in 70 as the input
-		attribute_validator(@life_rnd)
+		@validator.attribute_validator(@life_rnd)
 		@life_rnd = make_rnd(@life_rnd)
 		puts "You have #{@life_rnd} points of life."
 	end
