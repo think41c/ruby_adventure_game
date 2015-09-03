@@ -1,4 +1,5 @@
-class locales
+class Locales
+	
   def locale_00
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
