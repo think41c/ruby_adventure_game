@@ -14,9 +14,9 @@ class Intro
 		@messages.intro_prompt
 		@dexterity = 0 
 		get_life
-		# prompt_for_attribute
-		# get_attrib
-    # locale_00
+		@messages.prompt_for_attribute
+		get_attrib
+    # @locales.locale_00
 	end
 
 	def get_life
@@ -29,7 +29,7 @@ class Intro
 
 	def get_attrib
 		dexterity = gets.chomp
-		attribute_validator(dexterity)
+		@validator.attribute_validator(dexterity)
     dexterity = make_rnd(dexterity)
     puts "Your dexterity is #{dexterity}"
 	end
