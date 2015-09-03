@@ -1,18 +1,43 @@
 require_relative './locales'
+require_relative './validator'
 
 class Intro
 
 	attr_accessor :life, :life_rnd, :dexterity
 
 	def initialize 
-    locales = Locales.new
+    @locales = Locales.new
+    @validator = Validator.new
 		intro_prompt
 		@dexterity = 0 
 		get_life
 		prompt_for_attribute
 		get_attrib
-    locales.locale_00
+    locale_00
 	end
+
+
+  def locale_00
+    puts "You're outside a castle. You see a path to the north. N/S/E/W"    
+    direction = gets.chomp
+    if direction_validator(direction) == true
+      puts cardinal_convert(direction)
+    else
+      "Choose again"
+      locale_00
+    end
+
+    if direction.upcase == "N"
+      puts "You kick your horse sternly to move Northward!"
+      location = "locale_01"
+      locale_01
+    else 
+      puts "You hit an impasse and return to the castle."
+      locale_01
+      # Instead of going back to locale_01, can I go
+      # back to the method that just called it? 
+    end
+  end
 
 	def intro_prompt
 		puts "Choose your own adventure!"
@@ -27,24 +52,6 @@ class Intro
 		puts "You have #{@life_rnd} points of life."
 	end
 
-	def validate_dexterity
-		if @dexterity.match(/[A-Z]/i)
-			puts "Please type in a number only."
-			get_attrib
-		end
-	end
-    
-	def attribute_validator(user_input)
-		if user_input.to_s.match(/[A-Z]/i)
-			puts "Please type in a number only."
-			get_life
-		end
-
-		if user_input.to_i > 100 || user_input.to_i < 0
-			puts "Try again with a number between 0 and 100."
-			get_life
-		end
-	end
 
 	def get_attrib
 		dexterity = gets.chomp
@@ -78,18 +85,6 @@ class Intro
     end
   end
 
-  
-
-  def direction_validator(direction)
-    if direction.to_s.match(/[NSEW]/i) && direction.length == 1
-      puts "You've picked a noble direction!"
-      true
-    else
-      puts "Not a valid direction!"
-      false
-    end
-  end
-
   def invalid_direction
     puts "You've picked an invalid direction"
   end
@@ -105,18 +100,12 @@ class Intro
 
     puts cardinal_convert(direction)
 
-d    case direction 
+    case direction 
     when "N" 
       locale_02
     when "S"
       locale_00
     end
-
-    # May need to make a massive Case statement that 
-    # asks what the local is and then switch to the 
-    # method of that locale to prompt the user. 
-    # The program will be a massive case, and a pile of
-    # methods displaying the locale. 
   end
 
   def locale_02
