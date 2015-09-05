@@ -16,7 +16,7 @@ class Locales
     
     case direction
     when "N"
-      puts "You kick your horse sternly to move Northward!"
+      puts @messages.horse_direction(direction)
       locale_01
     else
       puts "You hit an impasse and return."
@@ -31,9 +31,10 @@ class Locales
 
     case direction 
     when "N" 
+      puts @messages.horse_direction(direction)
       locale_02
     when "S"
-      puts "You kick your horse sternly to move Southward!"
+      puts @messages.horse_direction(direction)
       locale_00
     end
   end

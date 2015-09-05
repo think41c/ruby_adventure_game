@@ -31,7 +31,7 @@ class Messages
     when "W"
       cardinal = "Westward"
     end
-    "You kick your horse sternly and move #{cardinal}"
+    "You kick your horse sternly and move #{cardinal}!"
   end
 
   def prompt_for_attribute
