@@ -26,7 +26,7 @@ class Locales
 
   def locale_01
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
-    direction  = gets.chomp
+    direction  = gets.chomp.upcase
     if @validator.valid_or_not(direction) == false then locale_01 end
 
     case direction 
