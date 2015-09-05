@@ -19,9 +19,10 @@ class Validator
 		end
 	end
 
-  def valid_or_not(direction)  
+  def valid_or_not(direction) 
+    @messages = Messages.new 
     if direction_validator(direction) == true
-      puts cardinal_convert(direction)
+      puts @messages.cardinal_convert(direction)
     else
       "Choose again"
       locale_00
