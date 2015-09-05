@@ -16,7 +16,6 @@ class Locales
     case direction
     when "N"
       puts "You kick your horse sternly to move Northward!"
-      location = "locale_01"
       locale_01
     else
       puts "You hit an impasse and return."
