@@ -20,6 +20,20 @@ class Messages
     end
   end
 
+  def horse_direction(direction)
+    case direction 
+    when "N" 
+      cardinal = "Northward"
+    when "S"
+      cardinal = "Southward"
+    when "E"
+      cardinal = "Eastward"
+    when "W"
+      cardinal = "Westward"
+    end
+    "You kick your horse sternly and move #{cardinal}"
+  end
+
   def prompt_for_attribute
     puts "Congrats, you now need to pick another attribute. \n" 	
   end  

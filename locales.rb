@@ -2,6 +2,7 @@ class Locales
 
   def initialize
     @validator = Validator.new
+    @messages  = Messages.new
   end
 
   def choose
