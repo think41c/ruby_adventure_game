@@ -16,7 +16,9 @@ class Intro
 		get_life
 		@messages.prompt_for_attribute
 		get_attrib
-    # @locales.locale_00
+    # puts "after artkl"
+    @locales.locale_00
+    # puts "fasdfjasdl"
 	end
 
 	def get_life

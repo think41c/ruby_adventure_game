@@ -19,6 +19,15 @@ class Validator
 		end
 	end
 
+  def valid_or_not(direction)  
+    if direction_validator(direction) == true
+      puts cardinal_convert(direction)
+    else
+      "Choose again"
+      locale_00
+    end
+  end
+
   def direction_validator(direction)
     if direction.to_s.match(/[NSEW]/i) && direction.length == 1
       puts "You've picked a noble direction!"
