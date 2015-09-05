@@ -6,7 +6,7 @@ class Validator
 			get_attrib
 		end
 	end
-    
+
 	def attribute_validator(user_input)
 		if user_input.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."

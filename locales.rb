@@ -3,9 +3,10 @@ class Locales
   def locale_00  # needs to be refactored to take in the direction with the locale method
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction = gets.chomp
+    puts work
+    @validator.test
     @validator.valid_or_not(direction)
     puts "after validator"
-
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move Northward!"

@@ -2,12 +2,14 @@ require_relative './locales'
 require_relative './validator'
 require_relative './messages'
 
-class Intro
+class Adventure
 
 	attr_accessor :life, :life_rnd, :dexterity
 
 	def initialize 
     system "clear"
+    work = "it works!"
+    @testy     = "Its tsetyy"
     @locales   = Locales.new
     @validator = Validator.new
     @messages  = Messages.new
@@ -16,9 +18,7 @@ class Intro
 		get_life
 		@messages.prompt_for_attribute
 		get_attrib
-    # puts "after artkl"
     @locales.locale_00
-    # puts "fasdfjasdl"
 	end
 
 	def get_life
@@ -43,5 +43,5 @@ class Intro
 	end
 end
 
-a = Intro.new 
+a = Adventure.new 
 a
