@@ -5,6 +5,10 @@ class Messages
     puts "You've picked an invalid direction"
   end
 
+  def impasse
+    puts "You've hit an impasse and return."
+  end
+
   def cardinal_convert(direction)
     case direction.upcase
     when "N" 
@@ -31,7 +35,7 @@ class Messages
     when "W"
       cardinal = "Westward"
     end
-    "You kick your horse sternly and move #{cardinal}!"
+    puts "You kick your horse sternly and move #{cardinal}!"
   end
 
   def prompt_for_attribute
