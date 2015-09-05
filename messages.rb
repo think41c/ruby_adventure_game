@@ -21,7 +21,7 @@ class Messages
   end
 
   def prompt_for_attribute
-    puts "Congrats, you now need to pick another attribute. \n\n\n" 	
+    puts "Congrats, you now need to pick another attribute. \n" 	
   end  
 
   def intro_prompt
