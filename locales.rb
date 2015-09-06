@@ -1,9 +1,13 @@
 class Locales
 
+  def initialize
+    @validator = Validator.new
+  end
+
   def locale_00  # needs to be refactored to take in the direction with the locale method
+    puts @aa
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction  = gets.chomp
-    @validator = Validator.new
     if @validator.valid_or_not(direction) == false then locale_00 end
 
     if direction.upcase == "N"
@@ -19,7 +23,6 @@ class Locales
   def locale_01
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
     direction  = gets.chomp
-    @validator = Validator.new
     if @validator.valid_or_not(direction) == false then locale_01 end
       
     # if @validator.direction_validator(direction) == false 
