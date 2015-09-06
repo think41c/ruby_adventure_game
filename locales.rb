@@ -21,16 +21,11 @@ class Locales
     direction  = gets.chomp
     @validator = Validator.new
     if @validator.valid_or_not(direction) == false then locale_01 end
-    puts "here"    
-    
-    
-    
+      
     if @validator.direction_validator(direction) == false 
       invalid_direction
       locale_01
     end
-
-    puts cardinal_convert(direction)
 
     case direction 
     when "N" 
