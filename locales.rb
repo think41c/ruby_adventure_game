@@ -4,12 +4,7 @@ class Locales
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction  = gets.chomp
     @validator = Validator.new
-    @validator.valid_or_not(direction)
-
-    # case direction.upcase
-    # when "N" puts "hi"
-    # else
-    # end
+    if @validator.valid_or_not(direction) == false then locale_01
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move Northward!"
@@ -18,15 +13,17 @@ class Locales
     else 
       puts "You hit an impasse and return."
       locale_00
-      # Instead of going back to locale_01, can I go
-      # back to the method that just called it? 
     end
   end
 
   def locale_01
-    @validator = Validator.new
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
-    direction = gets.chomp
+    direction  = gets.chomp
+    @validator = Validator.new
+    if @validator.valid_or_not(direction) == false then locale_01
+    puts "here"    
+    
+    
     
     if @validator.direction_validator(direction) == false 
       invalid_direction

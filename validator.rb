@@ -25,7 +25,7 @@ class Validator
       puts @messages.cardinal_convert(direction)
     else
       "Choose again"
-      locale_00
+      false
     end
   end
 
