@@ -8,8 +8,6 @@ class Adventure
 
 	def initialize 
     system "clear"
-    work = "it works!"
-    @testy     = "Its tsetyy"
     @locales   = Locales.new
     @validator = Validator.new
     @messages  = Messages.new
