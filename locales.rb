@@ -4,7 +4,7 @@ class Locales
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction  = gets.chomp
     @validator = Validator.new
-    if @validator.valid_or_not(direction) == false then locale_01 end
+    if @validator.valid_or_not(direction) == false then locale_00 end
 
     if direction.upcase == "N"
       puts "You kick your horse sternly to move Northward!"
@@ -22,10 +22,10 @@ class Locales
     @validator = Validator.new
     if @validator.valid_or_not(direction) == false then locale_01 end
       
-    if @validator.direction_validator(direction) == false 
-      invalid_direction
-      locale_01
-    end
+    # if @validator.direction_validator(direction) == false 
+    #   invalid_direction
+    #   locale_01
+    # end
 
     case direction 
     when "N" 
