@@ -41,6 +41,16 @@ class Validator
 
   private 
   
+  def fight_validator(action)
+    if direction.to_s.match(/[FR]/i) && action.length == 1
+      puts "You make a hasty choice."
+      true
+    else
+      puts "Not a valid action."
+      false
+    end
+  end
+  
   def direction_validator(direction)
     if direction.to_s.match(/[NSEW]/i) && direction.length == 1
       puts "You've picked a noble direction!"
