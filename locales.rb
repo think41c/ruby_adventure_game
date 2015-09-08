@@ -45,8 +45,8 @@ class Locales
 
   def locale_02
     puts "You've busted into the castle! You encounter a goblin. Should you (F)ight or (R)un?"
-    direction  = gets.chomp.upcase
-    locale_01 if @validator.fight_valid_or_not(action) == false
+    action  = gets.chomp.upcase
+    locale_02 if @validator.fight_valid_or_not(action) == false
 
     # case direction 
     # when "N" 
