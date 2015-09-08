@@ -19,6 +19,16 @@ class Validator
 		end
 	end
 
+  def fight_valid_or_not(action)
+    @messages = Messages.new
+    if fight_validator(action) == true
+      puts @messages.fight_convert(action)
+    else
+      "Choose again"
+      false
+    end
+  end 
+
   def valid_or_not(direction) 
     @messages = Messages.new 
     if direction_validator(direction) == true

@@ -24,6 +24,15 @@ class Messages
     end
   end
 
+  def fight_convert(action)
+    case action
+    when "F"
+      desc = "You decide to fight!"
+    when "R"
+      desc = "You run!!"
+    end
+  end
+
   def horse_direction(direction)
     case direction 
     when "N" 
