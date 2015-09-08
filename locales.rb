@@ -19,7 +19,7 @@ class Locales
       @messages.horse_direction(direction)
       locale_01
     else
-      puts "You hit an impasse and return."
+      @messages.impasse
       locale_00
     end
   end
@@ -27,7 +27,7 @@ class Locales
   def locale_01
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
     direction  = gets.chomp.upcase
-    if @validator.valid_or_not(direction) == false then locale_01 end
+    locale_01 if @validator.valid_or_not(direction) == false
 
     case direction 
     when "N" 
