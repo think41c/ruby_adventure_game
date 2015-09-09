@@ -48,18 +48,20 @@ class Locales
     action  = gets.chomp.upcase
     locale_02 if @validator.fight_valid_or_not(action) == false
 
-    # case direction 
-    # when "N" 
-    #   @messages.horse_direction(direction)
+    case action
+    when "F" 
+      puts "You win the fight!"
     #   locale_02
-    # when "S"
-    #   @messages.horse_direction(direction)
-    #   locale_00
+    when "R"
+      puts "You run like a wimp!"
+      # locale_99
     # else
     #   @messages.horse_direction(direction)
     #   @messages.impasse
     #   locale_01
-    # end
+    end
+
+    
   end
 
 end
