@@ -51,17 +51,11 @@ class Locales
     case action
     when "F" 
       puts "You win the fight!"
-    #   locale_02
     when "R"
       puts "You run like a wimp!"
-      # locale_99
-    # else
-    #   @messages.horse_direction(direction)
-    #   @messages.impasse
-    #   locale_01
     end
 
-    
+
   end
 
 end
