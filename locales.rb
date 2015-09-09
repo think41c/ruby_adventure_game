@@ -72,8 +72,9 @@ class Locales
     when "E"
       puts "Somehow or other, you find yourself in front of anoher goblin."
       locale_02
+    when "W"
+      puts "You begin to walk, but think it might be haunted and return."
+      locale_99
     end
-
   end
-
 end
