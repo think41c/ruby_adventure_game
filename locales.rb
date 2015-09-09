@@ -65,6 +65,13 @@ class Locales
     when "N"
       @messages.impasse
       locale_99
+    when "S"
+      puts "You stumble around for a while and then walk through some spider webs."
+      @messages.impasse
+      locale_99
+    when "E"
+      puts "Somehow or other, you find yourself in front of anoher goblin."
+      locale_02
     end
 
   end
