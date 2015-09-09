@@ -51,16 +51,22 @@ class Locales
     case action
     when "F" 
       puts "You win the fight!"
+      locale_03
     when "R"
       puts "You run like a wimp!"
       locale_99
     end
   end
 
+  def locale_03
+    puts "You are triumphant! Now what..."
+  end
+
   def locale_99
     puts "While running you trip. You've fallen into a trap door. You can't see anything. N/S/E/W?"
     direction  = gets.chomp.upcase
     locale_99 if @validator.valid_or_not(direction) == false
+
     case direction
     when "N"
       @messages.impasse
