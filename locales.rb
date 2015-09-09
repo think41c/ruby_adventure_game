@@ -58,7 +58,15 @@ class Locales
   end
 
   def locale_99
-    puts "While running you trip. You've fallen into a trap door."
+    puts "While running you trip. You've fallen into a trap door. You can't see anything. N/S/E/W?"
+    direction  = gets.chomp.upcase
+    locale_99 if @validator.valid_or_not(direction) == false
+    case direction
+    when "N"
+      @messages.impasse
+      locale_99
+    end
+
   end
 
 end
