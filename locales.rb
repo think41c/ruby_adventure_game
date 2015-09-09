@@ -53,9 +53,12 @@ class Locales
       puts "You win the fight!"
     when "R"
       puts "You run like a wimp!"
+      locale_99
     end
+  end
 
-
+  def locale_99
+    puts "While running you trip. You've fallen into a trap door."
   end
 
 end
