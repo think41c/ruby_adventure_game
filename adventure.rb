@@ -11,11 +11,11 @@ class Adventure
     @locales   = Locales.new
     @validator = Validator.new
     @messages  = Messages.new
-		@messages.intro_prompt
-		@dexterity = 0 
-		get_life
-		@messages.prompt_for_attribute
-		get_attrib
+	@messages.intro_prompt
+	@dexterity = 0 
+	get_life
+	@messages.prompt_for_attribute
+	get_attrib
     @locales.locale_00
 	end
 
@@ -30,8 +30,8 @@ class Adventure
 	def get_attrib
 		dexterity = gets.chomp
 		@validator.attribute_validator(dexterity)
-    dexterity = make_rnd(dexterity)
-    puts "Your dexterity is #{dexterity}"
+	    dexterity = make_rnd(dexterity)
+	    puts "Your dexterity is #{dexterity}"
 	end
 
 	def make_rnd(attribute)
