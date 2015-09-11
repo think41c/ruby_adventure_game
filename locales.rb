@@ -67,8 +67,12 @@ class Locales
     puts "You see a map on the floor. Pick it up? (Y)es or (N)o."
     direction  = gets.chomp.upcase
     locale_03 if @validator.valid_or_not(direction) == false
+    case direction
+    when "Y"
+    # Begin to add inventory and multifunctinoality using flags.   
+    when "N"
 
-
+    end
   end
 
   def locale_99
