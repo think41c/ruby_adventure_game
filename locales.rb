@@ -3,7 +3,6 @@ class Locales
   def initialize
     @validator = Validator.new
     @messages  = Messages.new
-    @adventure = Adventure.new
   end
 
   def choose
@@ -61,7 +60,6 @@ class Locales
 
   def locale_03
     puts "You are triumphant! You may want to check your stamina after that fight."
-    puts "Your stamina is #{@adventure.life_rnd}"
   end
 
   def locale_99
