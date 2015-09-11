@@ -39,6 +39,12 @@ class Adventure
 		puts "You rolled a #{attribute}"
 		attribute
 	end
+
+	def status    # Show the 2 attributes
+		puts "Your dexterity is #{dexterity} and life is #{life_rnd}"
+	end
+
+
 end
 
 a = Adventure.new 
