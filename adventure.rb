@@ -16,7 +16,7 @@ class Adventure
 	get_life
 	@messages.prompt_for_attribute
 	get_attrib
-    @locales.locale_00
+    @locales.locale_00(@life_rnd, @dexterity)
 	end
 
 	def get_life
@@ -28,9 +28,9 @@ class Adventure
 	end
 
 	def get_attrib
-		dexterity = gets.chomp
+		@dexterity = gets.chomp
 		@validator.attribute_validator(dexterity)
-	    dexterity = make_rnd(dexterity)
+	    @dexterity = make_rnd(dexterity)
 	    puts "Your dexterity is #{dexterity}"
 	end
 

@@ -9,7 +9,10 @@ class Locales
     
   end
 
-  def locale_00  # needs to be refactored to take in the direction with the locale method
+  def locale_00(life, dex)  # needs to be refactored to take in the direction with the locale method
+    @life = life
+    @dex  = dex
+
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction  = gets.chomp.upcase
     locale_00 if @validator.valid_or_not(direction) == false
@@ -59,7 +62,10 @@ class Locales
   end
 
   def locale_03
-    puts "You are triumphant! You may want to check your stamina after that fight."
+    puts "You are triumphant! 
+          You may want to check your stamina after that fight."
+    puts "Your life is #{@life}, and your dex is #{@dex}"
+
   end
 
   def locale_99
