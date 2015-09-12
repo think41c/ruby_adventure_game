@@ -3,6 +3,7 @@ class Locales
   def initialize
     @validator = Validator.new
     @messages  = Messages.new
+    @inventory = {}
   end
 
   def choose
@@ -63,7 +64,13 @@ class Locales
 
   def locale_04
     puts "You see a staircase to the (N)orth. You came from the South. N/S/E/W. (I)nventory."
-    
+    direction  = gets.chomp.upcase
+    locale_04 if @validator.valid_or_not(direction) == false
+    case direction 
+    when "I" 
+      puts "You have the following in inventory #{inventory.keys}"
+    end
+
   end
 
   def locale_03
@@ -75,7 +82,7 @@ class Locales
     case direction
     when "Y"
       puts "You add the map to your inventory. You can hit (V) to view it."
-      inventory_map = true
+      inventory = {map: true}
       locale_04
     when "N"
       puts "You foolishly leave the map on the ground and walk forward."

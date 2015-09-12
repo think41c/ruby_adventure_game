@@ -52,7 +52,7 @@ class Validator
   end
 
   def direction_validator(direction)
-    if direction.to_s.match(/[NSEW]/i) && direction.length == 1
+    if direction.to_s.match(/[NSEWYI]/i) && direction.length == 1
       puts "You've picked a noble direction!"
       true
     else
