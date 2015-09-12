@@ -69,7 +69,9 @@ class Locales
     locale_03 if @validator.valid_or_not(direction) == false
     case direction
     when "Y"
-    # Begin to add inventory and multifunctinoality using flags.   
+      puts "You add the map to your inventory. You can hit (V) to view it."
+      inventory_map = true
+      
     when "N"
 
     end
