@@ -9,10 +9,13 @@ class Locales
   def locale_00(life, dex) 
     @life = life
     @dex  = dex
+    locale_001
+  end 
 
+  def locale_001
     puts "You're outside a castle. You see a path to the north. N/S/E/W"    
     direction  = gets.chomp.upcase
-    locale_00 if @validator.valid_or_not(direction) == false
+    locale_001 if @validator.valid_or_not(direction) == false
     
     case direction
     when "N"
@@ -20,14 +23,14 @@ class Locales
       locale_01
     else
       @messages.impasse
-      locale_00
+      locale_001
     end
   end
 
   def locale_01
     puts "You're standing in front of the castle. The path you came from is to the (S)outh. The gate is (N)orth."
     direction  = gets.chomp.upcase
-    locale_01 if @validator.valid_or_not(direction) == false
+    locale_001 if @validator.valid_or_not(direction) == false
 
     case direction 
     when "N" 
@@ -35,11 +38,11 @@ class Locales
       locale_02
     when "S"
       @messages.horse_direction(direction)
-      locale_00
+      locale_001
     else
       @messages.horse_direction(direction)
       @messages.impasse
-      locale_01
+      locale_001
     end
   end
 
@@ -78,11 +81,11 @@ class Locales
     case direction
     when "Y"
       puts "You add the map to your inventory. You can hit (V) to view it."
-      inventory = {map: true}
+      @inventory = {map: true}
       locale_04
     when "N"
       puts "You foolishly leave the map on the ground and walk forward."
-      inventory_map = false
+      @inventory = {map: false}
       locale_04
     end
   end
