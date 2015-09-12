@@ -61,6 +61,11 @@ class Locales
     end
   end
 
+  def locale_04
+    puts "You see a staircase to the (N)orth. You came from the South. N/S/E/W. (I)nventory."
+    
+  end
+
   def locale_03
     puts "You are triumphant! You may want to check your stamina after that fight."
     puts "Your life is #{@life}, and your dex is #{@dex}".rjust(60, "*-")
@@ -71,9 +76,11 @@ class Locales
     when "Y"
       puts "You add the map to your inventory. You can hit (V) to view it."
       inventory_map = true
-      
+      locale_04
     when "N"
-
+      puts "You foolishly leave the map on the ground and walk forward."
+      inventory_map = false
+      locale_04
     end
   end
 
