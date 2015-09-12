@@ -46,6 +46,11 @@ class Locales
     end
   end
 
+  def inventory
+      puts "You have the following in inventory #{@inventory.keys}"
+      locale_04
+  end
+
   def locale_02
     puts "You've busted into the castle! You encounter a goblin. Should you (F)ight or (R)un?"
     action  = gets.chomp.upcase
@@ -67,8 +72,7 @@ class Locales
     locale_04 if @validator.valid_or_not(direction) == false
     case direction 
     when "I" 
-      puts "You have the following in inventory #{@inventory.keys}"
-      locale_04
+      inventory
     end
 
   end
