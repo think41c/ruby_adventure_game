@@ -6,11 +6,7 @@ class Locales
     @inventory = {}
   end
 
-  def choose
-    
-  end
-
-  def locale_00(life, dex)  # needs to be refactored to take in the direction with the locale method
+  def locale_00(life, dex) 
     @life = life
     @dex  = dex
 
