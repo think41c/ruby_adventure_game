@@ -19,6 +19,8 @@ class Messages
       "You have chosen East"
     when "W"
       "You have chosen West"
+    when "I"
+      "You have chosen to look in your inventory."
     else
       "Somehow you put in a bad direction."
     end

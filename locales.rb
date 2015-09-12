@@ -67,7 +67,8 @@ class Locales
     locale_04 if @validator.valid_or_not(direction) == false
     case direction 
     when "I" 
-      puts "You have the following in inventory #{inventory.keys}"
+      puts "You have the following in inventory #{@inventory.keys}"
+      locale_04
     end
 
   end
