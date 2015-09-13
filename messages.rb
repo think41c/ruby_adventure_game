@@ -21,6 +21,8 @@ class Messages
       "You have chosen West"
     when "I"
       "You have chosen to look in your inventory."
+    when "Y"
+      "Saying yes is usually a good idea."
     else
       "Somehow you put in a bad direction."
     end

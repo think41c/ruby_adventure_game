@@ -51,7 +51,7 @@ class Locales
       if inventory.has_key?(map) 
         puts "you have a map"
       end
-      
+
   end
 
   def locale_02
@@ -88,7 +88,7 @@ class Locales
     locale_03 if @validator.valid_or_not(direction) == false
     case direction
     when "Y"
-      puts "You add the map to your inventory. You can hit (V) to view it."
+      puts "You add the map to your inventory."
       @inventory = {map: true}
       locale_04
     when "N"
