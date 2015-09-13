@@ -48,10 +48,12 @@ class Locales
 
   def inventory_menu
       puts "You have the following in inventory #{@inventory.keys}"
-      if @inventory[:map] == true 
-        puts "you have a map"
+      @inventory.each do |key, value|
+        if key == :map && value == true
+          puts "You have a trusty (and crusty) map"
+          
+        end
       end
-
   end
 
   def locale_02
