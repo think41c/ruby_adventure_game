@@ -48,7 +48,10 @@ class Locales
 
   def inventory
       puts "You have the following in inventory #{@inventory.keys}"
-      locale_04
+      if inventory.has_key?(map) 
+        puts "you have a map"
+      end
+      
   end
 
   def locale_02
