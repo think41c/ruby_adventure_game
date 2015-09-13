@@ -46,9 +46,9 @@ class Locales
     end
   end
 
-  def inventory
+  def inventory_menu
       puts "You have the following in inventory #{@inventory.keys}"
-      if inventory.has_key?(map) 
+      if @inventory[:map] == true 
         puts "you have a map"
       end
 
@@ -75,7 +75,7 @@ class Locales
     locale_04 if @validator.valid_or_not(direction) == false
     case direction 
     when "I" 
-      inventory
+      inventory_menu
     end
 
   end
