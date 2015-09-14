@@ -51,7 +51,8 @@ class Locales
       @inventory.each do |key, value|
         if key == :map && value == true
           puts "You have a trusty (and crusty) map"
-          # you should be able to ask to examine this.     
+          examine_response = gets.chomp
+          puts examine_response
         end
       end
   end
