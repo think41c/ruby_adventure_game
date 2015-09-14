@@ -47,14 +47,21 @@ class Locales
   end
 
   def inventory_menu
-      puts "You have the following in inventory #{@inventory.keys}"
-      @inventory.each do |key, value|
-        if key == :map && value == true
-          puts "You have a trusty (and crusty) map"
-          examine_response = gets.chomp
-          puts examine_response
+    puts "You have the following in inventory #{@inventory.keys}"
+    @inventory.each do |key, value|
+      if key == :map && value == true
+        puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
+        examine_response = gets.chomp
+        when examine_response
+        case "Y" 
+          puts "You look at the map."
+        case "N"
+          puts "You move on from looking at the map."
+        else 
+          puts "You didn't make a valid choice."
         end
       end
+    end
   end
 
   def locale_02
