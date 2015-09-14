@@ -51,7 +51,7 @@ class Locales
       @inventory.each do |key, value|
         if key == :map && value == true
           puts "You have a trusty (and crusty) map"
-          
+          # you should be able to ask to examine this.     
         end
       end
   end
@@ -78,7 +78,8 @@ class Locales
     case direction 
     when "I" 
       inventory_menu
-    end
+    end  
+    # Other "I" input possibilties need to be added to every other method.
 
   end
 
