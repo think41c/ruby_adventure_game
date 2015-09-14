@@ -52,10 +52,10 @@ class Locales
       if key == :map && value == true
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
         examine_response = gets.chomp
-        when examine_response
-        case "Y" 
+        case examine_response
+        when "Y" 
           puts "You look at the map."
-        case "N"
+        when "N"
           puts "You move on from looking at the map."
         else 
           puts "You didn't make a valid choice."
