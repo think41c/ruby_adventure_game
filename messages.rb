@@ -10,11 +10,17 @@ class Messages
   end
 
   def map_message
-    puts "***********"
-    puts "***********"
-    puts "***********"
-    puts "***********"
-    puts "***********"
+    puts "[99]***********"
+    puts "***************"
+    puts "***************"
+    puts "***************"
+    puts "***************"
+    puts "*****[04]STAIRS"
+    puts "*****[03]-MAP**"
+    puts "**GOB[02]LIN***"
+    puts "----CASTLE-----"
+    puts "*****[01]******"
+    puts "*****[00]******"
   end
 
   def cardinal_convert(direction)
