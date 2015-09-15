@@ -95,6 +95,10 @@ class Locales
     case direction 
     when "I" 
       inventory_menu
+    when "N"
+      # if dexterity is low, then you can't go up the stairs.
+    when "S" 
+      # the goblin needs to disappear from locale_03. Massive refactoring needs.
     end  
     # Other "I" input possibilties need to be added to every other method.
 
