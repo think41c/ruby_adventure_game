@@ -55,14 +55,14 @@ class Locales
     when "N"
       puts "You move on from looking at the map."
     else 
-      puts "You didn't make a valid choice."
+      puts "You didn't make a valid choice. (Y)es or (N)o?"
+      examine_response = gets.chomp
+      examine_map(examine_response)
     end
     @looked_at_map = true
-    inventory_menu
   end
 
   def inventory_menu
-    puts "You have the following in inventory #{@inventory.keys}"
     @inventory.each do |key, value|
       if key == :map && value == true && @looked_at_map == false
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
