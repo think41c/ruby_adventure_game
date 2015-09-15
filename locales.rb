@@ -1,6 +1,7 @@
 class Locales
 
   def initialize
+    @looked_at_map = false
     @validator = Validator.new
     @messages  = Messages.new
     @inventory = {}
@@ -56,14 +57,14 @@ class Locales
     else 
       puts "You didn't make a valid choice."
     end
-    @looked_at? = true
+    @looked_at_map = true
     inventory_menu
   end
 
   def inventory_menu
     puts "You have the following in inventory #{@inventory.keys}"
     @inventory.each do |key, value|
-      if key == :map && value == true && @looked_at? == false
+      if key == :map && value == true && @looked_at_map == false
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
         examine_response = gets.chomp
         examine_map(examine_response)
