@@ -9,6 +9,14 @@ class Messages
     puts "You've hit an impasse and return."
   end
 
+  def map_message
+    puts "***********"
+    puts "***********"
+    puts "***********"
+    puts "***********"
+    puts "***********"
+  end
+
   def cardinal_convert(direction)
     case direction.upcase
     when "N" 

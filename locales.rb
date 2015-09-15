@@ -50,6 +50,7 @@ class Locales
     case examine_response.upcase
     when "Y" 
       puts "You look at the map."
+      @messages.map_message
     when "N"
       puts "You move on from looking at the map."
     else 
