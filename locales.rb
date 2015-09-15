@@ -46,20 +46,24 @@ class Locales
     end
   end
 
+  def examine_map(examine_response)
+    case examine_response.upcase
+    when "Y" 
+      puts "You look at the map."
+    when "N"
+      puts "You move on from looking at the map."
+    else 
+      puts "You didn't make a valid choice."
+    end
+  end
+
   def inventory_menu
     puts "You have the following in inventory #{@inventory.keys}"
     @inventory.each do |key, value|
       if key == :map && value == true
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
         examine_response = gets.chomp
-        case examine_response.upcase
-        when "Y" 
-          puts "You look at the map."
-        when "N"
-          puts "You move on from looking at the map."
-        else 
-          puts "You didn't make a valid choice."
-        end
+        examine_map(examine_response)
       end
     end
   end
