@@ -99,8 +99,16 @@ class Locales
       # if dexterity is low, then you can't go up the stairs.
     when "S" 
       # the goblin needs to disappear from locale_03. Massive refactoring needs.
+    when "E"
+      puts "You hit an impasse."
+      locale_04
+    when "W"
+      puts "You hit an impasse."
+      locale_04
+    else
+      puts "You entered something wrong."
+      locale_04
     end  
-    # Other "I" input possibilties need to be added to every other method.
 
   end
 
