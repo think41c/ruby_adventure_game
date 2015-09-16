@@ -73,14 +73,14 @@ class Locales
       end
     end
     puts "That's everything in your inventory."
-  end*
+  end
 
   def locale_02
     puts "You've busted into the castle!"
     if @goblin_dead == false
       puts " You encounter a goblin. Should you (F)ight or (R)un?"
     end
-    action  = gets.chomp.upcase
+    action = gets.chomp.upcase
     locale_02 if @validator.fight_valid_or_not(action) == false
 
     case action
@@ -116,11 +116,9 @@ class Locales
       puts "You entered something wrong."
       locale_04
     end  
-
   end
 
   def locale_03
-    
     if @visited_before_03 == false
       @visited_before_03 = true
       puts "You are triumphant! You may want to check your stamina after that fight."
