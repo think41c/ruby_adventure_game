@@ -1,7 +1,8 @@
 class Locales
 
   def initialize
-    @looked_at_map = false
+    @looked_at_map     = false
+    @visited_before_03 = false
     @validator   = Validator.new
     @messages    = Messages.new
     @inventory   = {}
@@ -119,21 +120,27 @@ class Locales
   end
 
   def locale_03
-    puts "You are triumphant! You may want to check your stamina after that fight."
-    puts "Your life is #{@life}, and your dex is #{@dex}".rjust(60, "*-")
-    puts "You see a map on the floor. Pick it up? (Y)es or (N)o."
-    direction  = gets.chomp.upcase
-    locale_03 if @validator.valid_or_not(direction) == false
-    case direction
-    when "Y"
-      puts "You add the map to your inventory."
-      @inventory = {map: true}
-      locale_04
-    when "N"
-      puts "You foolishly leave the map on the ground and walk forward."
-      @inventory = {map: false}
-      locale_04
+    
+    if @visited_before_03 == false
+      @visited_before_03 = true
+      puts "You are triumphant! You may want to check your stamina after that fight."
+      puts "Your life is #{@life}, and your dex is #{@dex}".rjust(60, "*-")
+      puts "You see a map on the floor. Pick it up? (Y)es or (N)o." 
+      direction  = gets.chomp.upcase
+      locale_03 if @validator.valid_or_not(direction) == false
+      case direction
+      when "Y"
+        puts "You add the map to your inventory."
+        @inventory = {map: true}
+        locale_04
+      when "N"
+        puts "You foolishly leave the map on the ground and walk forward."
+        @inventory = {map: false}
+        locale_04
+      end
     end
+    puts "You move onto locale_04"
+    locale_04
   end
 
   def locale_99
