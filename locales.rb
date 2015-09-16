@@ -2,9 +2,10 @@ class Locales
 
   def initialize
     @looked_at_map = false
-    @validator = Validator.new
-    @messages  = Messages.new
-    @inventory = {}
+    @validator   = Validator.new
+    @messages    = Messages.new
+    @inventory   = {}
+    @goblin_dead = false
   end
 
   def locale_00(life, dex) 
@@ -71,16 +72,20 @@ class Locales
       end
     end
     puts "That's everything in your inventory."
-  end
+  end*
 
   def locale_02
-    puts "You've busted into the castle! You encounter a goblin. Should you (F)ight or (R)un?"
+    puts "You've busted into the castle!"
+    if @goblin_dead == false
+      puts " You encounter a goblin. Should you (F)ight or (R)un?"
+    end
     action  = gets.chomp.upcase
     locale_02 if @validator.fight_valid_or_not(action) == false
 
     case action
     when "F" 
       puts "You win the fight!"
+      @goblin_dead = true
       locale_03
     when "R"
       puts "You run like a wimp!"
@@ -95,6 +100,7 @@ class Locales
     case direction 
     when "I" 
       inventory_menu
+      locale_04
     when "N"
       # if dexterity is low, then you can't go up the stairs.
     when "S" 
