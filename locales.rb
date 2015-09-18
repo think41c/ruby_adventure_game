@@ -103,7 +103,13 @@ class Locales
       inventory_menu
       locale_04
     when "N"
-      # if dexterity is low, then you can't go up the stairs.
+      if @dex < 50 
+        puts "Your dexterity is too low."
+        locale_04
+      else
+        puts "yoru dexterity is enough. But you decide to rethink things."
+        locale_04
+      end
     when "S" 
       # the goblin needs to disappear from locale_03. Massive refactoring needs.
     when "E"
