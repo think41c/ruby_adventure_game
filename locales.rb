@@ -111,7 +111,7 @@ class Locales
         locale_04
       end
     when "S" 
-      # the goblin needs to disappear from locale_03. Massive refactoring needs.
+      puts "You travel back the way you came, where you once saw a goblin."
     when "E"
       puts "You hit an impasse."
       locale_04
