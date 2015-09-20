@@ -61,14 +61,15 @@ class Locales
       examine_response = gets.chomp
       examine_map(examine_response)
     end
-    @looked_at_map = true
+    # @looked_at_map = true
   end
 
   def inventory_menu
     system("clear")
     puts "INVENTORY MENU"
+    puts @inventory
     @inventory.each do |key, value|
-      if key == :map && value == true && @looked_at_map == false
+      if key == :map && value == true 
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
         examine_response = gets.chomp
         examine_map(examine_response)
