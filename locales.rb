@@ -95,6 +95,7 @@ class Locales
   end
 
   def locale_04
+    puts "LOCALE_04"
     puts "You see a staircase to the (N)orth. You came from the South. N/S/E/W. (I)nventory."
     direction  = gets.chomp.upcase
     locale_04 if @validator.valid_or_not(direction) == false
@@ -107,7 +108,7 @@ class Locales
         puts "Your dexterity is too low."
         locale_04
       else
-        puts "yoru dexterity is enough. But you decide to rethink things."
+        puts "Your dexterity is enough. But you decide to rethink things."
         locale_04
       end
     when "S" 
@@ -144,7 +145,7 @@ class Locales
         locale_04
       end
     end
-    puts "You move onto locale_04"
+    puts "Nothing but a dead goblin here. You move back to Locale_04"
     locale_04
   end
 
