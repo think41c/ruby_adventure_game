@@ -29,7 +29,10 @@ class Adventure
 
 	def get_attrib
 		@dexterity = gets.chomp
-		@validator.attribute_validator(@dexterity)
+		if @validator.attribute_validator(@dexterity) == false 
+			get_attrib
+		end
+		
 	    @dexterity = make_rnd(@dexterity)
 	    puts "Your dexterity is #{@dexterity}"
 	end
