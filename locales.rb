@@ -65,6 +65,8 @@ class Locales
   end
 
   def inventory_menu
+    system("clear")
+    puts "INVENTORY MENU"
     @inventory.each do |key, value|
       if key == :map && value == true && @looked_at_map == false
         puts "You have a trusty (and crusty) map. Examine it? (Y)es or (N)o."
@@ -101,8 +103,10 @@ class Locales
     locale_04 if @validator.valid_or_not(direction) == false
     case direction 
     when "I" 
+      puts "here?"
       inventory_menu
       locale_04
+      puts "end of i"
     when "N"
       if @dex < 50 
         puts "Your dexterity is too low."
