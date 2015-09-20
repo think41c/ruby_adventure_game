@@ -112,6 +112,7 @@ class Locales
       end
     when "S" 
       puts "You travel back the way you came, where you once saw a goblin."
+      locale_03
     when "E"
       puts "You hit an impasse."
       locale_04
