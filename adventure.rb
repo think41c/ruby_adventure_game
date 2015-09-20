@@ -29,9 +29,9 @@ class Adventure
 
 	def get_attrib
 		@dexterity = gets.chomp
-		@validator.attribute_validator(dexterity)
-	    @dexterity = make_rnd(dexterity)
-	    puts "Your dexterity is #{dexterity}"
+		@validator.attribute_validator(@dexterity)
+	    @dexterity = make_rnd(@dexterity)
+	    puts "Your dexterity is #{@dexterity}"
 	end
 
 	def make_rnd(attribute)
