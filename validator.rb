@@ -10,12 +10,12 @@ class Validator
 	def attribute_validator(user_input)
 		if user_input.to_s.match(/[A-Z]/i)
 			puts "Please type in a number only."
-      return false
+      false
 		end
 
 		if user_input.to_i > 100 || user_input.to_i < 0
 			puts "Try again with a number between 0 and 100."
-      return false
+      false   # why is this saving all the bad input when repeated bad input?
 		end
 	end
 
